@@ -1,0 +1,8 @@
+Functions planned:
+
+1. Set default input element text.
+2. Remove that content on input commit, possibly restyle
+3. If nothing is entered restore default text if focus is lost
+4. Remove default value on submit if still present
+
+As usual - cross browser compatible, as lightweight as possible.
