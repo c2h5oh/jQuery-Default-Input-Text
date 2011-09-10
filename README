@@ -1,9 +1,19 @@
-Functions planned:
+Functions:
 
-1. Set default input element text.
-2. Remove that content on input commit, possibly restyle
-3. If nothing is entered restore default text if focus is lost
-4. Remove default value on submit if still present
+1. Sets default input element text (from title) and adds 'defaultInput' class.
+2. Removes that text and class when input is focused
+3. If nothing is entered restores default text & class when focus is lost
+4. Removes default text from input on submit if it's still present
 
 
-As usual - cross browser compatible, as lightweight as possible.
+As usual - cross browser compatible & as lightweight as possible.
+
+
+Usage example:
+
+$('#form_id').jQLiteID();
+
+
+or to enable it for all forms:
+
+$('form').jQLiteID();

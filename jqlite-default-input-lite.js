@@ -1,6 +1,6 @@
 /**
  * jQLiteID - Lightweight jQuery input default text plugin
- * @version: 0.1 (2011/09/10)  
+ * @version: 1.0 (2011/09/10)  
  * @author Maciej Lisiewski 
  * Dual licensed under the MIT and GPL licenses:
  *   http://www.opensource.org/licenses/mit-license.php
