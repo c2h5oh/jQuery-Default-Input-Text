@@ -28,8 +28,8 @@
 						$(this).val('');
 						$(this).removeClass('defaultInput');
 					}
-				});
-			)};
+				})
+			});
 			
 			$(el).find('input[type=text]').each(function(){
 				$(this).blur(function(){					
@@ -40,8 +40,8 @@
 					}
 				});				
 			});
-			$(el).blur();	
-		});
+			$(el).find('input[type=text]').blur();	
+		};
 		
 		this.each (
 			function(){ init(this); }
