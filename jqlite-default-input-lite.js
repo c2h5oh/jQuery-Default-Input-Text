@@ -9,30 +9,42 @@
 
 (function($) {		
 	$.fn.jQLiteID = $.fn.jqliteid = function(){		
-		$(this).submit(function(){
-			$(this).find('input[type=text]').each(function(){
-				if ($(this).val() == $(this).attr('title'))
-				{
-					$(this).val('');
-				}			
-			});			
+		
+		init = function(el)
+		{
+			$(el).submit(function(){
+				$(el).find('input[type=text]').each(function(){
+					if ($(this).val() == $(this).attr('title'))
+					{
+						$(this).val('');
+					}			
+				});			
+			});		
+			
+			$(el).find('input[type=text]').each(function(){
+				$(this).focus(function(){
+					if ($(this).val() == $(this).attr('title'))
+					{
+						$(this).val('');
+						$(this).removeClass('defaultInput');
+					}
+				});
+			)};
+			
+			$(el).find('input[type=text]').each(function(){
+				$(this).blur(function(){					
+					if ($(this).val().trim() == '')
+					{
+						$(this).val($(this).attr('title'));
+						$(this).addClass('defaultInput');
+					}
+				});				
+			});
+			$(el).blur();	
 		});
 		
-		$(this).focus(function(){
-			if ($(this).val() == $(this).attr('title'))
-			{
-				$(this).val('');
-				$(this).removeClass('defaultInput');
-			}
-		});
-		
-		$(this).blur(function(){
-			if ($(this).val().trim() == '')
-			{
-				$(this).val($(this).attr('title'));
-				$(this).addClass('defaultInput');
-			}
-		});
-		$(this).blur();		
+		this.each (
+			function(){ init(this); }
+		);				
 	}
 })(jQuery);
