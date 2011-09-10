@@ -8,8 +8,7 @@
 **/
 
 (function($) {		
-	$.fn.jQLiteID = $.fn.jqliteid = function(){
-		
+	$.fn.jQLiteID = $.fn.jqliteid = function(){		
 		$(this).submit(function(){
 			$(this).find('input[type=text]').each(function(){
 				if ($(this).val() == $(this).attr('title'))
